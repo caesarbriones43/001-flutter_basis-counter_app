@@ -12,6 +12,12 @@ class HomeScreen extends StatelessWidget {
         title: const Text("CounterApp"),
         elevation: 5.0,
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print("Pressed");
+        },
+        child: const Icon(Icons.add),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
