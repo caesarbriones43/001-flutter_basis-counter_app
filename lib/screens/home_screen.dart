@@ -5,6 +5,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var fontSize30 = const TextStyle(fontSize: 30);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("CounterApp"),
@@ -13,9 +15,9 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text('Number of Clicks'),
-            Text('0'),
+          children: [
+            Text('Number of Clicks', style: fontSize30),
+            Text('10', style: fontSize30),
           ],
         ),
       ),
