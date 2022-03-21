@@ -19,12 +19,35 @@ class _CounterAppState extends State<CounterApp> {
         title: const Text("CounterApp"),
         elevation: 5.0,
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          counter++;
-          setState(() {});
-        },
-        child: const Icon(Icons.add),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Container(
+        margin: const EdgeInsets.only(bottom: 20.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            FloatingActionButton(
+              onPressed: () {
+                counter--;
+                setState(() {});
+              },
+              child: const Icon(Icons.exposure_minus_1_outlined),
+            ),
+            FloatingActionButton(
+              onPressed: () {
+                counter = 0;
+                setState(() {});
+              },
+              child: const Icon(Icons.restore),
+            ),
+            FloatingActionButton(
+              onPressed: () {
+                counter++;
+                setState(() {});
+              },
+              child: const Icon(Icons.exposure_plus_1_outlined),
+            )
+          ],
+        ),
       ),
       body: Center(
         child: Column(
